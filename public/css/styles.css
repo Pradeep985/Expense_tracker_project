@@ -1,0 +1,136 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background-color: #003366;
+    color: white;
+    padding: 15px 0;
+    width: 100%; 
+    text-align: center;
+}
+
+
+/* Centering the Form Container */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 20px;
+}
+
+/* Form Section Styling */
+.form-section {
+    width: 100%;
+    max-width: 600px; 
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+.expense-form h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.btn {
+    padding: 12px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Table Section Styling */
+.table-section {
+    padding: 30px;
+    text-align: center;
+}
+
+table {
+    width: 80%; 
+    margin-top: 30px;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #003366;
+    color: white;
+    font-size: 1.1rem;
+}
+
+td {
+    background-color: #fff;
+    font-size: 1rem;
+}
+
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+button.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+button.btn-warning {
+    background-color: #ffc107;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .expense-form {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+}
