@@ -1,11 +1,11 @@
 document.getElementById("loginForm").addEventListener("submit", async function (event) {
-    event.preventDefault(); 
-    
+    event.preventDefault();
+
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
 
     try {
-        const response = await fetch("http://localhost:3000/auth/login", {
+        const response = await fetch("/auth/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -16,12 +16,9 @@ document.getElementById("loginForm").addEventListener("submit", async function (
         const data = await response.json();
 
         if (response.status === 200) {
-            alert("User login successful!");
-            window.location.href = "/dashboard"; 
-        } else if (response.status === 401) {
-            alert("Incorrect password. Please try again.");
-        } else if (response.status === 404) {
-            alert("User not found. Please sign up.");
+            localStorage.setItem("token", data.token);  // Store token in localStorage
+            alert
+            // window.location.href = "/dashboard";  // Redirect to dashboard
         } else {
             alert(data.error || "Something went wrong. Please try again.");
         }
