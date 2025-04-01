@@ -5,16 +5,12 @@ const path = require("path");
 require("dotenv").config();
 const app = express();
 const authRoutes = require('./routes/authRoutes');
-
-
 // Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.use(express.static("public"));
 
-const cookieParser = require("cookie-parser"); // ✅ Required to read cookies
-app.use(cookieParser());
 app.use('/auth', authRoutes);
 
 const authMiddleware = require("./middleware/authMiddleware");
