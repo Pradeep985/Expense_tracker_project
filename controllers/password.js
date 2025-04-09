@@ -2,7 +2,6 @@ const path = require('path');
 
 const express = require('express');
 const Sib = require('sib-api-v3-sdk')
-
 const router = express.Router();
 const userAuth=require('../middleware/auth');
 const uuid = require('uuid');
@@ -13,8 +12,6 @@ const Forgotpassword = require('../models/forgotpassword');
 const client = Sib.ApiClient.instance
 const apiKey = client.authentications['api-key']
 apiKey.apiKey = process.env.SIB_KEY
-
-
 
 const bodyParser = require('body-parser');
 router.use(bodyParser.json())
